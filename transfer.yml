@@ -13,7 +13,7 @@ spring:
       minimum-idle: 5
       validation-timeout: 5000
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://rm-2zesgkkzbs20syqe78o.mysql.rds.aliyuncs.com/xiaobaibai?prepStmtCacheSize=517&cachePrepStmts=true&autoReconnect=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT
+    url: jdbc:mysql://333rm-2zesgkkzbs20syqe78o.mysql.rds.aliyuncs.com/xiaobaibai?prepStmtCacheSize=517&cachePrepStmts=true&autoReconnect=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT
     username: baiminghui
     password: baiminghui123@
 
