@@ -6,8 +6,6 @@ spring:
       matching-strategy: ANT_PATH_MATCHER
   main:
     allow-circular-references: true
-  application:
-    name: bpo-transfer
   datasource:
     hikari:
       maximum-pool-size: 100
