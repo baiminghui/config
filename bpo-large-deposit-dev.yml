@@ -1,0 +1,30 @@
+server:
+  port: 9093
+spring:
+  application:
+    name: bpo-large-deposit
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://180.76.235.188:1433;DatabaseName=rcdbackendbase
+    username: sa
+    password: 123abc??
+  jpa:
+    show-sql: true
+    database: sql_server
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  main:
+    allow-circular-references: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
