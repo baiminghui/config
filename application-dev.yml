@@ -1,0 +1,69 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: bpo-transfer
+  datasource:
+    hikari:
+      maximum-pool-size: 100
+      idle-timeout: 30000
+      max-lifetime: 600000
+      connection-timeout: 10000
+      connection-test-query: SELECT 1
+      minimum-idle: 5
+      validation-timeout: 5000
+    driverClassName: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql:///bpobase?prepStmtCacheSize=517&cachePrepStmts=true&autoReconnect=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT
+    #    username: root
+    #    password: "%HUAxin123%"
+    url: jdbc:mysql://rm-2zesgkkzbs20syqe78o.mysql.rds.aliyuncs.com/xiaobaibai?prepStmtCacheSize=517&cachePrepStmts=true&autoReconnect=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=GMT
+    username: baiminghui
+    password: baiminghui123@
+
+
+  jpa:
+    database: MYSQL
+    generate-ddl: true
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: true
+    properties:
+      hibernate:
+        # 格式化sql语句
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        event:
+          merge:
+            entity_copy_observer: allow
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    lettuce:
+      # 连接池
+      pool:
+        # 最大连接数
+        max-active: 20
+        # 最大空闲链接
+        max-idle: 5
+        # 最小空闲链接
+        min-idle: 0
+        # 最大阻塞等待时间 -1：没有限制
+        max-wait: -1
+    # 超时时间
+    timeout: 12000
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 300000 #单位毫秒
+        readTimeout: 300000 #单位毫秒
+error:
+  msg: error.properties
+
+# 导出文件 export excel
+newFilePath: C:\Users\lz\Documents\ExportExcel\
+templatePath:  C:\Users\lz\Documents\ExportExcel\template\
