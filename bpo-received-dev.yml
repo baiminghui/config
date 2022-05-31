@@ -66,3 +66,6 @@ eureka:
 logging:
   level:
     com.huaxin.cloud.iot: debug
+upload:
+  file:
+    Path: C:\Users\lz\Documents\ExportExcel\image\
