@@ -1,8 +1,6 @@
 server:
   port: 9093
 spring:
-  application:
-    name: bpo-large-deposit
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://180.76.235.188:1433;DatabaseName=rcdbackendbase
